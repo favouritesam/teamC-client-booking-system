@@ -31,7 +31,7 @@ or grooming sessions by selecting from available time slots. The platform provid
 
 ## 🚀 Deployment
 Live URL: 
-GitHub Repo:  https://github.com/favouritesam/teamc-client-booking-system.git
+GitHub Repo: https://github.com/favouritesam/teamc-client-booking-system-applications.git
 
 
 ---
@@ -40,5 +40,5 @@ GitHub Repo:  https://github.com/favouritesam/teamc-client-booking-system.git
 
 1. Clone the repository:
    ```bash
-   git clone  https://github.com/favouritesam/teamc-client-booking-system.git
-   cd teamc-client-booking-system
+   git clone https://github.com/favouritesam/teamc-client-booking-system-applications.git
+   cd teamc-client-booking-system-applications
