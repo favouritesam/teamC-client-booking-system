@@ -67,8 +67,7 @@ export default function CustomerDetailsForm() {
 
             setCustomerDetails(formData)
             // Generate booking id and route to summary
-            // “I’m generating the booking id using a combination of the current
-            // timestamp and a random number to ensure uniqueness.
+            // “I am generating the booking id using a combination of the current timestamp and a random number to ensure uniqueness.
             // Date.now()
             // This gives each booking a unique and traceable id without needing a backend.”
             const bookingId = `BK-${Date.now()}`
@@ -79,11 +78,7 @@ export default function CustomerDetailsForm() {
         }
     }
 
-    const isFormValid =
-        formData.name.trim() &&
-        formData.email.trim() &&
-        /\S+@\S+\.\S+/.test(formData.email) &&
-        formData.phone.trim() &&
+    const isFormValid = formData.name.trim() && formData.email.trim() && /\S+@\S+\.\S+/.test(formData.email) && formData.phone.trim() &&
         /^\+?[\d\s\-()]{10,}$/.test(formData.phone.replace(/\s/g, ""));
 
     return (
@@ -100,6 +95,7 @@ export default function CustomerDetailsForm() {
             </CardHeader>
             <CardContent className="p-4 sm:p-6 lg:p-8 pt-0">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+
                     {/* Name Field */}
                     <div className="space-y-2">
                         <label className="text-sm sm:text-base font-medium text-gray-700 flex items-center gap-2">

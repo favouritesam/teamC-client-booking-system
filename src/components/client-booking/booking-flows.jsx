@@ -1,6 +1,5 @@
 "use client"
 
-import { useRouter } from "next/navigation"
 import { useBookingStore } from "@/lib/zustand-store";
 import Header from "@/components/client-booking/header";
 import ServiceSelector from "@/components/client-booking/service-selector";
@@ -9,7 +8,7 @@ import TimeSelector from "@/components/client-booking/time-selector";
 import CustomerDetailsForm from "@/components/client-booking/customer-details-form";
 
 export default function BookingFlow() {
-    const router = useRouter()
+    // const router = useRouter()
     const {
         selectedService,
         selectedDate,

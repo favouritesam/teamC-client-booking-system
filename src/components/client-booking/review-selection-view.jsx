@@ -78,6 +78,7 @@ export default function ReviewSelectionView(){
                         <CardTitle className="text-xl sm:text-2xl text-indigo-900">Your Selection</CardTitle>
                     </CardHeader>
                     <CardContent className="p-4 sm:p-6 pt-0 space-y-4 sm:space-y-6">
+
                         {/* Selected Service */}
                         <div className="space-y-3 sm:space-y-4">
                             <h3 className="font-semibold text-base sm:text-lg">Selected Service</h3>
@@ -114,27 +115,28 @@ export default function ReviewSelectionView(){
                                     <div className="flex items-center gap-2">
                                         <User className="w-3 h-3 sm:w-4 sm:h-4 text-gray-500"/>
                                         <span className="text-xs sm:text-sm">
-                                                          <strong>Name:</strong> {customerDetails.name}
-                                                        </span>
+                                            <strong>Name:</strong> {customerDetails.name}
+                                        </span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-gray-500"/>
                                         <span className="text-xs sm:text-sm break-all">
-                                                      <strong>Email:</strong> {customerDetails.email}
-                                                      </span>
+                                            <strong>Email:</strong> {customerDetails.email}
+                                        </span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-gray-500"/>
                                         <span className="text-xs sm:text-sm">
-                                                         <strong>Phone:</strong> {customerDetails.phone}
-                                                        </span>
+                                            <strong>Phone:</strong> {customerDetails.phone}
+                                        </span>
                                     </div>
+
                                     {customerDetails.location && (
                                         <div className="flex items-center gap-2">
                                             <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-gray-500"/>
                                             <span className="text-xs sm:text-sm">
-                                                           <strong>Location:</strong> {customerDetails.location}
-                                                           </span>
+                                                <strong>Location:</strong> {customerDetails.location}
+                                            </span>
                                         </div>
                                     )}
                                 </div>
@@ -162,8 +164,7 @@ export default function ReviewSelectionView(){
                                     </div>
                                 </div>
 
-                                <div
-                                    className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 bg-gray-50 rounded-lg">
+                                <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 bg-gray-50 rounded-lg">
                                     <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600"/>
                                     <div>
                                         <p className="text-xs text-gray-600">Time</p>
@@ -225,8 +226,7 @@ export default function ReviewSelectionView(){
                             </div>
                             <p className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3">
                                 Payment will be collected at the time of service. We accept cash, credit
-                                cards, and digital
-                                payments.
+                                cards, and digital payments.
                             </p>
                             <div className="text-xs text-gray-500">
                                 <p>• No booking fees</p>

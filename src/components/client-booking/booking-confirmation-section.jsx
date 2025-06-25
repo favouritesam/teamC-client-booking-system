@@ -45,36 +45,37 @@ export default function BookingConfirmationSection() {
 
     const handleDownloadConfirmation = () => {
         const confirmationText = `
-BOOKING CONFIRMATION
-Timeless Trim Barbershop
+       BOOKING CONFIRMATION
+       Timeless Trim Barbershop
+       Booking ID: ${bookingId}
+       Customer Details:
+       Name: ${customerDetails.name}
+       Email: ${customerDetails.email}
+       Phone: ${customerDetails.phone}
+       ${customerDetails.location ? `Location: ${customerDetails.location}` : ""}
 
-Booking ID: ${bookingId}
-
-Customer Details:
-Name: ${customerDetails.name}
-Email: ${customerDetails.email}
-Phone: ${customerDetails.phone}
-${customerDetails.location ? `Location: ${customerDetails.location}` : ""}
-
-Service: ${selectedService.name}
-Date: ${formatDate(selectedDate)}
-Time: ${selectedTime}
-Duration: ${selectedService.duration}
-Price: $${selectedService.price}
-
-Location: Downtown Location
-Phone: (+234) 123-4567
-Email: info@timelesstrimbarbershop.com
-
-Thank you for choosing Timeless Trim Barbershop!
+       Service: ${selectedService.name}
+       Date: ${formatDate(selectedDate)}
+       Time: ${selectedTime}
+       Duration: ${selectedService.duration}
+       Price: $${selectedService.price}
+       Location: Downtown Location
+       Phone: (+234) 123-4567
+       Email: info@timelesstrimbarbershop.com
+       Thank you for choosing Timeless Trim Barbershop!
     `
-
+        // A Blob is a file-like object of immutable, raw data.
+        // I am converting the confirmationText into a blob with MIME type text/plain.
         const blob = new Blob([confirmationText], {type: "text/plain"})
+
+        // URL.createObjectURL(blob) generates a temporary URL pointing to the blob data.
+        // This is necessary so the browser knows where to fetch the file content from.
         const url = URL.createObjectURL(blob)
         const a = document.createElement("a")
         a.href = url
         a.download = `booking-confirmation-${bookingId}.txt`
         a.click()
+        // This frees up memory by revoking the temporary blob URL after it's been used
         URL.revokeObjectURL(url)
     }
 

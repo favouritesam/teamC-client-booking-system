@@ -25,7 +25,7 @@ export const useBookingStore = create(
             setIsConfirmed: (confirmed) => set({ isConfirmed: confirmed }),
             setCustomerDetails: (details) => set({ customerDetails: details }),
 
-            // Computed getters
+            // getters
             isSelectionComplete: () => {
                 const state = get()
                 return !!(
