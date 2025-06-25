@@ -19,7 +19,6 @@ export default function Header() {
                 </Avatar>
             </div>
 
-
             <div className="text-center pl-16 sm:pl-20 md:pl-24">
                 <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-indigo-900 bg-clip-text">
                     Timeless Trim Barbershop

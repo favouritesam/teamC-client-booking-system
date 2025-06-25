@@ -79,7 +79,7 @@ export default function BookingConfirmationSection() {
         URL.revokeObjectURL(url)
     }
 
-    //  Important notice
+    //  Important note
     // The handleShare function lets the user share their appointment confirmation.
     // It uses the browser's native sharing features, and if those aren't available,
     // it copies the text to the clipboard.
@@ -131,26 +131,31 @@ export default function BookingConfirmationSection() {
                 <CardContent className="p-4 sm:p-6 space-y-4 sm:space-y-6">
 
                     {/* Service Details */}
-                    <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-gray-50 rounded-lg">
-                        <div className="sm:w-16 sm:h-16 rounded-lg flex items-center justify-center">
+
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-4 bg-gray-50 rounded-lg">
+                        {/* Image */}
+                        <div className="w-24 h-24 sm:w-20 sm:h-20 rounded-lg overflow-hidden flex-shrink-0">
                             <img
                                 src={selectedService.image}
                                 alt={selectedService.name}
-                                className="w-full h-full rounded-md mt-6 object-cover"
+                                className="w-full h-full object-cover object-top"
                             />
                         </div>
 
-                        <div className="flex-1 min-w-0">
+                        {/* Text Content */}
+                        <div className="flex-1 text-center sm:text-left">
                             <h3 className="font-semibold text-base sm:text-lg">{selectedService.name}</h3>
                             <p className="text-gray-600 text-xs sm:text-sm mb-2">{selectedService.description}</p>
-                            <div className="flex items-center gap-3 sm:gap-4">
-                                <Badge variant="outline"
-                                       className="flex items-center gap-1 text-xs sm:text-sm">
-                                    <Clock className="w-2 h-2 sm:w-3 sm:h-3"/>
+
+                            <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-2 sm:gap-4 mt-2">
+                                <Badge
+                                    variant="outline"
+                                    className="flex items-center gap-1 text-xs sm:text-sm w-fit"
+                                >
+                                    <Clock className="w-3 h-3" />
                                     {selectedService.duration}
                                 </Badge>
-                                <span
-                                    className="font-bold text-base sm:text-lg">${selectedService.price}</span>
+                                <span className="font-bold text-sm sm:text-base">${selectedService.price}</span>
                             </div>
                         </div>
                     </div>

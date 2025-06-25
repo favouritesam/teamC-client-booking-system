@@ -11,10 +11,11 @@ const  ServiceCard = ({ service, isSelected, onSelect }) => {
             }`}
             onClick={onSelect}
         >
-            <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 relative">
+            <div className="h-48 sm:h-56 bg-gray-100 relative rounded-xl overflow-hidden">
                 <img src={service.image}
                      alt={service.name}
-                     className="w-full h-full object-cover" />
+                     className="w-full h-full object-cover object-top sm:object-center"
+                />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
 
