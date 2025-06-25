@@ -1,15 +1,15 @@
 "use client"
 
-import { useState } from "react"
-import { User, Mail, Phone, MapPin, Loader2 } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import {useState} from "react"
+import {User, Mail, Phone, MapPin, Loader2} from "lucide-react"
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card"
+import {Button} from "@/components/ui/button"
 
-import { useRouter } from "next/navigation"
+import {useRouter} from "next/navigation"
 import {useBookingStore} from "@/lib/zustand-store";
 
 export default function CustomerDetailsForm() {
-    const { customerDetails, setCustomerDetails, setBookingId } = useBookingStore()
+    const {customerDetails, setCustomerDetails, setBookingId} = useBookingStore()
     const [formData, setFormData] = useState(customerDetails)
     const [errors, setErrors] = useState({})
     const [isLoading, setIsLoading] = useState(false)
@@ -66,7 +66,11 @@ export default function CustomerDetailsForm() {
             await new Promise((resolve) => setTimeout(resolve, 1500))
 
             setCustomerDetails(formData)
-            // Generate booking ID and route to summary
+            // Generate booking id and route to summary
+            // “I’m generating the booking id using a combination of the current
+            // timestamp and a random number to ensure uniqueness.
+            // Date.now()
+            // This gives each booking a unique and traceable id without needing a backend.”
             const bookingId = `BK-${Date.now()}`
             setBookingId(bookingId)
 
@@ -85,8 +89,9 @@ export default function CustomerDetailsForm() {
     return (
         <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-xl">
             <CardHeader className="p-4 sm:p-6 lg:p-8">
-                <CardTitle className="flex items-center gap-2 text-2xl sm:text-3xl lg:text-4xl text-center text-indigo-900 justify-center">
-                    <User className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
+                <CardTitle
+                    className="flex items-center gap-2 text-2xl sm:text-3xl lg:text-4xl text-center text-indigo-900 justify-center">
+                    <User className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10"/>
                     Your Details
                 </CardTitle>
                 <p className="text-sm sm:text-base lg:text-lg text-gray-600 mt-2 text-center">
@@ -98,7 +103,7 @@ export default function CustomerDetailsForm() {
                     {/* Name Field */}
                     <div className="space-y-2">
                         <label className="text-sm sm:text-base font-medium text-gray-700 flex items-center gap-2">
-                            <User className="w-4 h-4 sm:w-5 sm:h-5" />
+                            <User className="w-4 h-4 sm:w-5 sm:h-5"/>
                             Full Name <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -119,7 +124,7 @@ export default function CustomerDetailsForm() {
                     {/* Email Field */}
                     <div className="space-y-2">
                         <label className="text-sm sm:text-base font-medium text-gray-700 flex items-center gap-2">
-                            <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                            <Mail className="w-4 h-4 sm:w-5 sm:h-5"/>
                             Email Address <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -140,7 +145,7 @@ export default function CustomerDetailsForm() {
                     {/* Phone Field */}
                     <div className="space-y-2">
                         <label className="text-sm sm:text-base font-medium text-gray-700 flex items-center gap-2">
-                            <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+                            <Phone className="w-4 h-4 sm:w-5 sm:h-5"/>
                             Phone Number <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -161,7 +166,7 @@ export default function CustomerDetailsForm() {
                     {/* Location Field (Optional) */}
                     <div className="space-y-2">
                         <label className="text-sm sm:text-base font-medium text-gray-700 flex items-center gap-2">
-                            <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
+                            <MapPin className="w-4 h-4 sm:w-5 sm:h-5"/>
                             Location (Optional)
                         </label>
                         <input
@@ -188,7 +193,7 @@ export default function CustomerDetailsForm() {
                     >
                         {isLoading ? (
                             <>
-                                <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 mr-2 animate-spin" />
+                                <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 mr-2 animate-spin"/>
                                 Saving Details...
                             </>
                         ) : (
@@ -199,9 +204,11 @@ export default function CustomerDetailsForm() {
 
                 {/* Form Status */}
                 {customerDetails.name && customerDetails.email && customerDetails.phone && !isLoading && (
-                    <div className="mt-4 sm:mt-6 flex items-center justify-center gap-2 p-3 sm:p-4 bg-green-50 border border-green-200 rounded-lg">
+                    <div
+                        className="mt-4 sm:mt-6 flex items-center justify-center gap-2 p-3 sm:p-4 bg-green-50 border border-green-200 rounded-lg">
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span className="text-sm sm:text-base text-green-700 font-medium">Details saved successfully!</span>
+                        <span
+                            className="text-sm sm:text-base text-green-700 font-medium">Details saved successfully!</span>
                     </div>
                 )}
             </CardContent>
