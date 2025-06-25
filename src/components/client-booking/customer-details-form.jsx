@@ -66,7 +66,7 @@ export default function CustomerDetailsForm() {
             await new Promise((resolve) => setTimeout(resolve, 1500))
 
             setCustomerDetails(formData)
-            // Generate booking id and route to summary
+            // Generate booking id and route to booking-page
             // “I am generating the booking id using a combination of the current timestamp and a random number to ensure uniqueness.
             // Date.now()
             // This gives each booking a unique and traceable id without needing a backend.”
