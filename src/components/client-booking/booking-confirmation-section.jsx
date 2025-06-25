@@ -78,9 +78,11 @@ Thank you for choosing Timeless Trim Barbershop!
         URL.revokeObjectURL(url)
     }
 
+    //  Important notice
     // The handleShare function lets the user share their appointment confirmation.
     // It uses the browser's native sharing features, and if those aren't available,
     // it copies the text to the clipboard.
+    // I'm using async because the navigator.share() and navigator.clipboard.writeText() methods are asynchronous, they return Promises.
 
     const handleShare = async () => {
         const shareData = {
@@ -225,22 +227,15 @@ Thank you for choosing Timeless Trim Barbershop!
                             Location & Contact
                         </h4>
                         <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
-                            <p>
-                                <strong>Address:</strong> 123 Main Street, Downtown
-                            </p>
-                            <p>
-                                <strong>Phone:</strong> (+234) 123-4567
-                            </p>
-                            <p>
-                                <strong>Email:</strong> info@timelesstrimbarbershop.com
-                            </p>
+                            <p><strong>Address:</strong> 123 Main Street, Downtown</p>
+                            <p><strong>Phone:</strong> (+234) 123-4567</p>
+                            <p><strong>Email:</strong> info@timelesstrimbarbershop.com</p>
                         </div>
                     </div>
 
                     {/* Important Notes */}
                     <div className="bg-amber-50 p-3 sm:p-4 rounded-lg border border-amber-200">
-                        <h4 className="font-semibold mb-2 text-amber-800 text-sm sm:text-base">Important
-                            Notes</h4>
+                        <h4 className="font-semibold mb-2 text-amber-800 text-sm sm:text-base">Important Notes</h4>
                         <ul className="text-xs sm:text-sm text-amber-700 space-y-1">
                             <li>• Please arrive 10 minutes before your appointment</li>
                             <li>• Cancellations must be made 24 hours in advance</li>
@@ -250,12 +245,11 @@ Thank you for choosing Timeless Trim Barbershop!
                 </CardContent>
             </Card>
 
-            {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Button
                     variant="outline"
                     onClick={handleBackToBooking}
-                    className="flex items-center gap-2 text-sm sm:text-base"
+                    className="cursor-pointer flex items-center gap-2 text-sm sm:text-base"
                 >
                     <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4"/>
                     Book Another Appointment
@@ -264,14 +258,14 @@ Thank you for choosing Timeless Trim Barbershop!
                 <Button
                     variant="outline"
                     onClick={handleDownloadConfirmation}
-                    className="flex items-center gap-2 text-sm sm:text-base"
+                    className="cursor-pointer flex items-center gap-2 text-sm sm:text-base"
                 >
                     <Download className="w-3 h-3 sm:w-4 sm:h-4"/>
                     Download Confirmation
                 </Button>
 
                 <Button
-                    className="bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-2 text-sm sm:text-base"
+                    className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-2 text-sm sm:text-base"
                     onClick={handleShare}
                 >
                     <Share2 className="w-3 h-3 sm:w-4 sm:h-4"/>
