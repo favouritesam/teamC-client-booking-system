@@ -1,10 +1,9 @@
+import LandingPage from "@/components/landing-page/Landing-parent/LandingPage";
+
 export default function HomePage() {
-    return (
-        <div>
-
-            welcome home
-        </div>
-
-    )
+  return (
+    <div>
+      <LandingPage />
+    </div>
+  );
 }
-
