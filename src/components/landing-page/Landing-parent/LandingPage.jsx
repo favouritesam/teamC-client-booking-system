@@ -4,6 +4,8 @@ import Details from '../Details.jsx';
 import Services from '../Services.jsx';
 import Reviews from '../Reviews.jsx';
 import About from '../About.jsx';
+import Footer from '../Footer.jsx';
+import Contact from '../Contact.jsx';
 
 const LandingPage = () => {
   return (
@@ -13,6 +15,8 @@ const LandingPage = () => {
       <Services />
       <About />
       <Reviews />
+      <Contact/>
+      <Footer />
     </div>
   );
 }

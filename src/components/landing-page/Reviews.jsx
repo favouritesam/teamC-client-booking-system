@@ -1,21 +1,5 @@
 import React from 'react';
-import {
-  Calendar,
-  Clock,
-  Star,
-  MapPin,
-  Phone,
-  Mail,
-  Scissors,
-  Users,
-  Award,
-  ChevronRight,
-  Menu,
-  X,
-  Instagram,
-  Facebook,
-  Twitter,
-} from "lucide-react";
+import {Star,} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card.jsx";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -44,7 +28,7 @@ const testimonials = [
 
 const Reviews = () => {
   return (
-    <section id="testimonials" className="py-16 sm:py-24 bg-gray-50">
+    <section id="reviews" className="py-16 sm:py-24 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-indigo-900 mb-4">What Our Clients Say</h2>

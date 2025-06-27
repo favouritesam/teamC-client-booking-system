@@ -1,21 +1,5 @@
 import React from 'react';
-import {
-      Calendar,
-      Clock,
-      Star,
-      MapPin,
-      Phone,
-      Mail,
-      Scissors,
-      Users,
-      Award,
-      ChevronRight,
-      Menu,
-      X,
-      Instagram,
-      Facebook,
-      Twitter,
-    } from "lucide-react";
+import {Clock} from "lucide-react";
   import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card.jsx";
 
