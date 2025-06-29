@@ -65,10 +65,3 @@ export const services = [
     },
 ]
 
-export const colorThemes = [
-    { name: "Ocean", primary: "bg-blue-600", secondary: "bg-blue-100", accent: "bg-cyan-500" },
-    { name: "Forest", primary: "bg-green-600", secondary: "bg-green-100", accent: "bg-emerald-500" },
-    { name: "Sunset", primary: "bg-orange-600", secondary: "bg-orange-100", accent: "bg-amber-500" },
-    { name: "Royal", primary: "bg-purple-600", secondary: "bg-purple-100", accent: "bg-violet-500" },
-    { name: "Rose", primary: "bg-rose-600", secondary: "bg-rose-100", accent: "bg-pink-500" },
-]
