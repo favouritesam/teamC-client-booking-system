@@ -1,12 +1,9 @@
-"use client"
+import LandingPage from "@/components/landing-page/Landing-parent/LandingPage";
 
 export default function HomePage() {
-
   return (
-      <div>
-        hello world
-      </div>
-  )
+    <div>
+      <LandingPage />
+    </div>
+  );
 }
-
-
