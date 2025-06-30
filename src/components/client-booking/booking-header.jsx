@@ -1,6 +1,6 @@
 "use client"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { MapPin, Star } from "lucide-react"
 import {useRouter} from "next/navigation";
 
@@ -14,13 +14,6 @@ export default function BookingHeader({ isConfirmed }) {
     return (
         <div className="text-center mb-6 sm:mb-8">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                {/*<Avatar className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16">*/}
-                {/*    <AvatarImage src="/placeholder.svg" />*/}
-                {/*    <AvatarFallback className="bg-gradient-to-br from-blue-600 to-purple-600 text-white text-lg sm:text-xl font-bold">*/}
-                {/*        TBS*/}
-                {/*    </AvatarFallback>*/}
-                {/*</Avatar>*/}
-
                 <div className="absolute left-4 sm:left-6 lg:left-8 top-2 sm:top-4">
                     <Avatar onClick={handleGoBack} className="cursor-pointer w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16">
                         <AvatarFallback className="bg-gradient-to-br from-blue-600 to-purple-600 text-white text-sm sm:text-base md:text-lg font-bold">

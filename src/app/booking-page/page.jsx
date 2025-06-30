@@ -1,27 +1,23 @@
-// "use client"
-//
-// import { useState } from "react"
-// import BookingFlow from "@/components/client-booking/booking-flows";
-// import LandingPage from "@/components/client-booking/landing-page";
-//
+// import LandingPageHome from "@/components/landing-page-ui/landing-page-home";
 //
 // export default function HomePage() {
-//   const [showBooking, setShowBooking] = useState(false)
+//     const [showBooking, setShowBooking] = useState(false)
 //
-//   const handleBookNow = () => {
-//     setShowBooking(true)
-//   }
+//     const handleBookNow = () => {
+//         setShowBooking(true)
+//     }
 //
-//   const handleBackToLanding = () => {
-//     setShowBooking(false)
-//   }
+//     const handleBackToLanding = () => {
+//         setShowBooking(false)
+//     }
 //
-//   if (showBooking) {
-//     return <BookingFlow onBackToLanding={handleBackToLanding} />
-//   }
+//     if (showBooking) {
+//         return <BookingFlow onBackToLanding={handleBackToLanding} />
+//     }
 //
-//   return <LandingPage onBookNow={handleBookNow} />
+//     return <LandingPageHome onBookNow={handleBookNow} />
 // }
+
 
 "use client"
 
