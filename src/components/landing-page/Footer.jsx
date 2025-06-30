@@ -40,27 +40,27 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-4">Quick Links</h4>
           <div className="space-y-2">
-            <button
+            <a href='#services'
                 
                 className="block text-gray-400 cursor-pointer hover:text-white transition-colors"
             >
                 Services
-            </button>
-            <button
+            </a>
+            <a href='#about'
                 
                 className="block text-gray-400 cursor-pointer hover:text-white transition-colors"
             >
                 About Us
-            </button>
-            <button
+            </a>
+            <a href='#reviews'
                 
                 className="block text-gray-400 cursor-pointer hover:text-white transition-colors"
             >
                 Reviews
-            </button>
-            <button  className=" cursor-pointer block text-gray-400 hover:text-white transition-colors">
+            </a>
+            <a href='/booking-page' className=" cursor-pointer block text-gray-400 hover:text-white transition-colors">
                 Book Now
-            </button>
+            </a>
           </div>
         </div>
           <div>

@@ -1,6 +1,6 @@
 "use client"
 
-import { ImageIcon } from "lucide-react"
+import { ImageIcon } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {services} from "@/lib/services";
 import ServiceCard from "@/components/client-booking/service-card";

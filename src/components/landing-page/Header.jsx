@@ -1,12 +1,17 @@
-import React from "react";
+"use client"
+import React, {useState} from "react";
+
 import {Menu,} from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  
+
   return (
-    <header className="sticky top-0 z-50 bg-gradient-to-br from-white via-blue-200 to-white backdrop-blur-sm  ">
-      <div className="py-5 px-5">
-        <div className="flex items-center         justify-between">
+    <header className="sticky top-0 z-50  bg-white  ">
+      <div className="p-4">
+        <div className="flex items-center justify-between">
           <div className="flex gap-2">
             <Avatar className="w-10 h-10">
               <AvatarImage src="/placeholder.svg" />
@@ -23,7 +28,31 @@ const Header = () => {
               </p>
             </div>
           </div>
-          <Menu className="h-8 w-8 md:hidden " />
+          <div>
+            <button
+              className="group relative  "
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <Menu className="h-8 w-8 md:hidden " />
+            </button>
+            {isMenuOpen && (
+              <div className="absolute top-full right-0 rounded-lg p-3 flex flex-col gap-6 items-center  group-focus:scale-y-100 origin-top  w-[200px] h-[200px] bg-blue-500 text-white">
+                <a href="#services " className="hover:text-black">
+                  Services
+                </a>
+                <a href="#about" className="hover:text-black">
+                  About
+                </a>
+                <a href="#reviews" className="hover:text-black">
+                  Reviews
+                </a>
+                <a href="#contact" className="hover:text-black">
+                  Contact
+                </a>
+              </div>
+            )}
+          </div>
+
           <nav className="hidden md:flex gap-6 items-center text-blue-600">
             <a className="hover:text-white" href="#services">
               Services

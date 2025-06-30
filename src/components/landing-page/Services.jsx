@@ -52,7 +52,7 @@ const Services = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group hover:shadow-2xl bg-white border-0"
+              className="group hover:shadow-2xl bg-white border-0 transition-transform transform hover:scale-105"
             >
               <div className="aspect-[4/3] overflow-hidden rounded-t-lg">
                 <img
@@ -79,11 +79,10 @@ const Services = () => {
                     {service.duration}
                   </div>
                   <Button
-                    // onClick={onBookNow}
                     size="sm"
                     className="bg-blue-600 hover:bg-blue-700 text-white"
                   >
-                    Book Now
+                    <a href='/booking-page'>Book Now</a>
                   </Button>
                 </div>
               </CardContent>
